@@ -1,0 +1,216 @@
+.content {
+  max-width: 100%;
+  width: 100vh;
+  height: 100vh;
+  color: #fff;
+  padding: 1.5rem 0 0 0;
+}
+.header {
+  height: 5vh;
+}
+
+.navbar {
+  margin: 2rem;
+}
+.navbar .icon {
+  color: #fff;
+}
+
+.square::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/square.svg);
+  background-repeat: no-repeat;
+  background-size: 130px;
+  width: 130px;
+  height: 130px;
+  border-radius: 5rem;
+  opacity: 0.1;
+  filter: invert();
+  z-index: -1;
+  pointer-events: none;
+  transform: rotate(70deg);
+  transform-origin: center;
+  top: -40px;
+  left: -40px;
+}
+.circleCenter::before {
+  filter: invert();
+  opacity: 0.2;
+  top: 30vh;
+  right: -3px;
+  width: 180px;
+}
+.dotted::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/dotted.svg);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  width: 80px;
+  height: 100%;
+  filter: invert();
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+  top: 25vh;
+  left: 25vw;
+}
+
+.pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  height: 95vh;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.infoHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+}
+.name {
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.number {
+  color: #fff;
+  text-align: right;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.types {
+  display: flex;
+  padding: 0.5rem;
+  list-style: none;
+  gap: 1rem;
+}
+.type {
+  color: #fff;
+  padding: 0.25rem 1.2rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 1rem;
+  filter: brightness(1.1);
+  text-align: center;
+}
+.pokemonImg {
+  display: flex;
+  margin-bottom: -2rem;
+  z-index: 2;
+  justify-content: center;
+}
+.pokemonImg img {
+  width: 200px;
+}
+
+.detail {
+  background-color: #fff;
+  color: #000;
+  border-radius: 2rem 2rem 0 0;
+  height: 60vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: 0;
+  display: flex;
+  flex-direction: column;
+}
+.navDetail {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+}
+.navDetailList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 4rem;
+  list-style: none;
+
+}
+
+.detail-item {
+  border-bottom: 3px solid #eee;
+  padding-bottom: 2rem;
+  width: 25%;
+  text-align: center;
+}
+
+.navDetailList li a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.active {
+  border-color: #3d89f3;
+}
+.active a{
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+.detailContent {
+  display: none;
+}
+.activeContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.detailContent-container{
+height: 100%;
+}
+.detailContent-list{
+  list-style: none;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  color: #333;
+  font-size: 0.875rem;
+  margin: 1rem 0;
+ }
+
+.atributeDetail{
+  padding-left: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: left; 
+  flex-basis: 80%; 
+}
+
+.detailContent p{
+  margin-left: 40px;
+  font-weight: 500;
+  color:#333
+}
+.detailList {
+  display: flex;
+  justify-content: space-between; 
+  padding: 5px 0; 
+  text-wrap: nowrap;
+}
+.atributeDetailList{
+  list-style: none;
+  display: inline-flex;
+  margin:0;
+  padding:0;
+}
