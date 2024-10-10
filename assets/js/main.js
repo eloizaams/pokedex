@@ -61,6 +61,6 @@ document.addEventListener("click", function (event) {
       const number = pokemonElement.getAttribute("data-pokemon");
   
       // Redireciona para pokeInfo.html, passando o número do Pokémon na URL
-      window.location.href = `./pokeInfo.html?number=${number}`;
+      window.location.href = `pokeInfo.html?number=${number}`;
     }
 });
