@@ -65,6 +65,7 @@
   padding: 0;
   height: 95vh;
 }
+
 .info {
   display: flex;
   flex-direction: column;

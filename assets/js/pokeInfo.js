@@ -5,7 +5,6 @@ const contents = document.querySelectorAll(".detailContent");
 const about = document.getElementById("about");
 const breeding = document.getElementById("breeding");
 const baseStats = document.getElementById("baseStats");
-const number = 1;
 
 function formatNumber(number) {
   return number.toString().padStart(3, "0");
@@ -163,8 +162,16 @@ function loadPokemonInfo(number) {
     breeding.innerHTML = convertPokemonToSpecies(pokeSpecies);
   });
 }
+// Função para pegar o valor do parâmetro "number" da URL
+function getPokemonNumberFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('number');  // Retorna o valor do parâmetro "number"
+}
 
-loadPokemonInfo(1);
+// Captura o número do Pokémon
+const number = getPokemonNumberFromUrl();
+
+loadPokemonInfo(number);
 
 // Função para alternar entre as seções
 menuItems.forEach((item) => {

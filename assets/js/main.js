@@ -6,12 +6,12 @@ const limit = 10;
 let offset = 0;
 
 function formatNumber(number) {
-  return number.toString().padStart(3, '0');
+  return number.toString().padStart(3, "0");
 }
 
 function convertPokemonToLi(pokemon) {
   return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" data-pokemon="${pokemon.number}">
             <span class="number">#${formatNumber(pokemon.number)}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -52,3 +52,15 @@ loadMoreButton.addEventListener("click", () => {
   }
 });
 
+document.addEventListener("click", function (event) {
+  
+  const pokemonElement = event.target.closest("li.pokemon");
+
+  if (pokemonElement) {
+   
+      const number = pokemonElement.getAttribute("data-pokemon");
+  
+      // Redireciona para pokeInfo.html, passando o número do Pokémon na URL
+      window.location.href = `./pokeInfo.html?number=${number}`;
+    }
+});

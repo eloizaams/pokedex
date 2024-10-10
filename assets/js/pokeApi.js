@@ -51,8 +51,6 @@ function convertPokeApiSpeciesToPokemon(pokeSpecies) {
   return pokemon;
 }
 
-
-
 pokeApi.getPokemonDetaiL = (pokemon) => {
   return fetch(pokemon.url)
     .then((response) => response.json())
