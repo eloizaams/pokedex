@@ -43,7 +43,7 @@
 }
 .dotted::before {
   content: "";
-  position: absolute;
+  position: relative;
   background-image: url(../img/dotted.svg);
   background-repeat: no-repeat;
   background-size: 80px;
@@ -53,8 +53,8 @@
   opacity: 0.2;
   z-index: -1;
   pointer-events: none;
-  top: 25vh;
-  left: 25vw;
+  top: -2rem;
+  right: -4rem;
 }
 
 .pokemon {

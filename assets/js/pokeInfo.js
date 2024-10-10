@@ -69,6 +69,7 @@ function convertPokemonToAbout(pokemon) {
                   
          `;
 }
+
 function convertPokemonToSpecies(pokemon) {
   return `<li class="detailList">
                       <span class="statName">Gender</span>
