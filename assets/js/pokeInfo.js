@@ -165,27 +165,30 @@ function loadPokemonInfo(number) {
 // Função para pegar o valor do parâmetro "number" da URL
 function getPokemonNumberFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('number');  // Retorna o valor do parâmetro "number"
+  return urlParams.get("number"); // Retorna o valor do parâmetro "number"
 }
 
 // Captura o número do Pokémon
 const number = getPokemonNumberFromUrl();
-
 loadPokemonInfo(number);
-
 // Função para alternar entre as seções
 menuItems.forEach((item) => {
   item.addEventListener("click", function (event) {
     event.preventDefault(); // Evita a navegação padrão
 
-    // Remove a classe 'active' de todos os links e conteúdos
+    // Remove a classe 'active' de todos os links
     menuItems.forEach((i) => i.classList.remove("active"));
     contents.forEach((c) => c.classList.remove("activeContent"));
-
-    // Adiciona 'active' ao link clicado e à respectiva seção
+    // Adiciona 'active' ao link clicado
     this.classList.add("active");
+
     const target = this.getAttribute("data-target");
 
-    document.getElementById(target).classList.add("activeContent");
+    const targetElement = document.getElementById(target);
+
+    // Verifica se o elemento alvo existe e adiciona a classe 'activeContent' ao seu elemento superior (parentNode)
+    if (targetElement && targetElement.parentNode) {
+      targetElement.parentNode.classList.add("activeContent");
+    }
   });
 });
